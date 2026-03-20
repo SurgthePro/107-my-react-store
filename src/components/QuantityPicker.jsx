@@ -4,12 +4,14 @@
 import"./QuantityPicker.css"; //You always import its pair.
 import { useState } from "react"; //Here, we need to indicate to this component that we want to use a state-variable.
 //Logic:
+
+// Line 10: useState and const are the only keywords used here. Here, we are creating a state-variable. "quantity" is the name of the variable; Then we are setting that variable to be a state-variable, and then we are setting its initial state-value. "setQuantity" is the functionName used to change the value of the variable.  "useState" specfies that we are using the state-variable.
+
 function QuantityPicker() //This is the outer function of this component. It contains two nested functions--nested at the same level. This handles the increase & decrease elements for the quantity state-variable.  In React,  outer functions are considered components, so their names begin with an Uppercase letter.
 {
-    {/* Line 10: useState and const are the only keywords used here. Here, we are creating a state-variable. "quantity" is the name of the variable; Then we are setting that variable to be a state-variable, and then we are setting its initial state-value. "setQuantity" is the functionName used to change the value of the variable.  "useState" specfies that we are using the state-variable.*/} 
-    const [quantity, setQuantity] = useState(10) 
+    const [quantity, setQuantity] = useState(1) 
     // const quantity = 1:
-    function handleDecrease() {/* This function is used so that when the user depresses the quantity decrease button, it will work.  Here, we are developing a state-variable.*/}
+    function handleDecrease() //This function is used so that when the user depresses the quantity decrease button, it will work.  Here, we are developing a state-variable
     {
         console.log("Decrease BTN");
         
