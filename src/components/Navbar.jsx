@@ -1,4 +1,5 @@
 // Imports:
+import { Link} from 'react-router-dom' /*We added this to the file. */
 import "./Navbar.css";
 
 // Logic:
@@ -8,7 +9,7 @@ function Navbar()
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
-      Navbar
+      Online-Store {/* This replaced the word: Navbar*/}
     </a>
     <button
       className="navbar-toggler"
@@ -24,16 +25,35 @@ function Navbar()
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
+        {/* Note: Here, we removed this: <a className=nav-link active" aria-current="page" href= "#"> */}
+          <Link className="nav-link active" to={"/"}>  {/* Here, we added this entire line of code.*/}
             Home
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            Link
-          </a>
+          <Link className="nav-link" to={"/about"}> {/* Here, we only added: to="/about"> */}
+          {/* Note: Here, we removed this: <a className=nav-link active" aria-current="page" href= "#"> Note: We would be able to replace # with about, but eventhough it works, it would not be an efficient rendering.*/}
+            About {/* Here, we replaced this word and removed "Link" */}
+          {/* Here, we removed: </a>*/}
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to={"/catalog"}> {/* Here we made some changes also from the original cost previously there.*/}
+            Catalog
+          </Link> {/* This replaced the closing anchor tag.*/}
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to={"/contact"}> {/* Here we made some changes also from the original cost previously there.*/}
+            Contact
+          </Link> {/* This replaced the closing anchor tag.*/}
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to={"/admin"}> {/* Here we made some changes also from the original cost previously there.*/}
+            Admin
+          </Link> {/* This replaced the closing anchor tag.*/}
         </li>
         <li className="nav-item dropdown">
+          
           <a
             className="nav-link dropdown-toggle"
             href="#"
@@ -41,11 +61,14 @@ function Navbar()
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown
+          </a>
+        </li>
+      </ul>
+                 {/*Dropdown
           </a>
           <ul className="dropdown-menu">
             <li>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#"> 
                 Action
               </a>
             </li>
@@ -80,7 +103,8 @@ function Navbar()
         <button className="btn btn-outline-success" type="submit">
           Search
         </button>
-      </form>
+      </form> */}
+
     </div>
   </div>
 </nav>

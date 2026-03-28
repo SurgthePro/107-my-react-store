@@ -5,16 +5,15 @@ import"./QuantityPicker.css"; //You always import its pair.
 import { useState } from "react"; //Here, we need to indicate to this component that we want to use a state-variable.
 //Logic:
 
-// Line 10: useState and const are the only keywords used here. Here, we are creating a state-variable. "quantity" is the name of the variable; Then we are setting that variable to be a state-variable, and then we are setting its initial state-value. "setQuantity" is the functionName used to change the value of the variable.  "useState" specfies that we are using the state-variable.
+// Line 12: useState and const are the only keywords used here (also "set" in "setQuantity" is also a keyword). Here, we are creating a state-variable. "quantity" is the name of the variable; Then we are setting that variable to be a state-variable, and then we are setting its initial state-value. "setQuantity" is the functionName used to change the value of the variable.  "useState" specfies that we are using the state-variable.
 
 function QuantityPicker() //This is the outer function of this component. It contains two nested functions--nested at the same level. This handles the increase & decrease elements for the quantity state-variable.  In React,  outer functions are considered components, so their names begin with an Uppercase letter.
 {
     const [quantity, setQuantity] = useState(1) 
-    // const quantity = 1:
-    function handleDecrease() //This function is used so that when the user depresses the quantity decrease button, it will work.  Here, we are developing a state-variable
+    // const quantity = 1: // setQuantity has only one part that is a keyword: "set." useState() is a React method. 
+    function handleDecrease() //This function is used so that when the user depresses the quantity decrease button, it will work.  Here, we are developing a state-variable.
     {
         console.log("Decrease BTN");
-        
         let nextVal = quantity - 1;
         if(nextVal > 0)
         {
@@ -32,7 +31,7 @@ function QuantityPicker() //This is the outer function of this component. It con
 
     return( 
         <div className = "quantity-picker">
-            <button className = "btn-minus" onClick={handleDecrease} disabled={quantity===1}>-</button> {/* We can disable the descrease button when the value is equal to 1. Note: "disabled" is a function. */}
+            <button className = "btn-minus" onClick={handleDecrease} disabled={quantity===1}>-</button> {/* We can disable the decrease button when the value is equal to 1. Note: "disabled" is a function. */}
             <label>{quantity}</label>   {/* Here, we use curly braces because we are inserting a variable--logic.*/}
             <button className="btn-plus" onClick={handleIncrease}>+</button>  
         </div>

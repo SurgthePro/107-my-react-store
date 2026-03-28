@@ -1,5 +1,5 @@
 //Note: This js file is not a jsx file because it won't need React since it will not include any html elements--it only needs logic code.  Nevertheless, it is still a component.
-//Products in the Catalog  Note:The following ojbect is in JSON format.  Note: We don't need to import anything here bc nothing is needed, for now. Later, yes.  
+//Products in the Catalog  Note:The following object is in JSON format.  Note: We don't need to import anything here bc nothing is needed, for now. Later, yes.  
 const catalog = [
     {
         "title": "Orange", 
@@ -26,7 +26,7 @@ const catalog = [
 //Note: The code above is an array of object literals. This array (for now) acts as a simple database for us since we don't currently have a DB. This array is already in JSON format.
 //Note: A class is a constructor (it's an object creator).  So the following is a constructor.  A class name begins with an UpperCase.  
 class DataService {
-    getProducts() //Here, we are creating a method of our object--the method performs something on its object.  Here, it returns the contents of the catalog (the product/catalog array).  This code is requesting a catalog from the data service. Is getProducts() an actual method?
+    getProducts() //Here, we are creating a method of our object--the method performs something on its object.  Here, it returns the contents of the catalog (the product/catalog array).  This code is requesting a catalog from the data service. Is getProducts() an actual method? Yes, but it's created (and named) by the
     {
         return catalog;// Here, we are requesting the contents of the catalogue array on this page.
     }

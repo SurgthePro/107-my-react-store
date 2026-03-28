@@ -1,7 +1,7 @@
 import "./Product.css";
 import QuantityPicker from "./QuantityPicker"; //Note: We are importing it bc we want it to be a child of this component.  In addition, we are getting props from the Catalog component (in the Product function below).
 
-function Product(props) // Note: Here, we have added a parameter to the function/component. It refers to the prop in the Catalog (parent) component. This function allows data to be shared from parent to child.  So, we need access to the Catalog/parent component--this is why we pass the argument "props."
+function Product(props) // Note: Here, we have added a parameter to the function/component. It refers to the prop in the Catalog (parent) component. This function allows data to be shared from parent to child.  So, we need access to the Catalog/parent component--this is why we pass the argument "props." But how does the system know that props is from the Catalog component? Because it can only come from its sole parent.
 {
     return(
         <div className="product">

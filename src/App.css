@@ -1,8 +1,8 @@
 /* Note: Any styling added here (in this parent file) will apply to all child files.  If you don't want this, then only add styling to the individual css files.*/
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /*padding: 2rem; */
   text-align: center;
 }
 
